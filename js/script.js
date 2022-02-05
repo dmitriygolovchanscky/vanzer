@@ -11,6 +11,9 @@ const pageSlider = new Swiper('.page', {
 
 	initialSlide: 0,
 
+
+	// чувствительность свайпа
+	touchRatio: 3,
 	// включение/отключение
 	// перетаскивание на пк
 	simulateTouch: false,
@@ -32,10 +35,10 @@ const pageSlider = new Swiper('.page', {
 	// управление колесом мыши
 	mousewheel: {
 		// чувствительность колеса мыши
-		sensitivity: 1,
+		sensitivity: 3,
 		// класс объекта на котором
 		// будет срабатывать прокрутка мышью
-		//eventsTarget: ".image-slider"
+		eventsTarget: ".wrapper"
 	},
 
 	// отключение функционала
