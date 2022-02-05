@@ -468,6 +468,9 @@ body {
 }
 
 @media (max-width: 1279px) {
+	.page {
+		overflow: auto;
+	}
 	.pagination {
 		display: none;
 	}
