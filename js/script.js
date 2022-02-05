@@ -11,9 +11,6 @@ const pageSlider = new Swiper('.page', {
 
 	initialSlide: 0,
 
-
-	// чувствительность свайпа
-	touchRatio: 1.5,
 	// включение/отключение
 	// перетаскивание на пк
 	simulateTouch: false,
