@@ -3,139 +3,145 @@ let wrapper = document.querySelector('.wrapper');
 var catalogSlider = null;
 var mediaQuerySize = 1280;
 
-function catalogSliderInit () {
-  if (!catalogSlider) {
-	const pageSlider = new Swiper('.page', {
-		wrapperClass: "page__wrapper",
-		slideClass: "page__screen",
-		direction: 'vertical',
-	
-		slidesPerView: 'auto',
-	
-		parallax: true,
-	
-		initialSlide: 0,
-	
-		// включение/отключение
-		// перетаскивание на пк
-		simulateTouch: false,
-	
-		// управление клавиатурой
-		keyboard: {
-			// включить/выключить
-			enabled: true,
-			// включить/выключить
-			// только когда слайдер
-			// в пределах вьюпорта
-			onlyInViewport: true,
-			// включить/выключить
-			// управление клавишами
-			// pageUp, pageDown
-			pageUpDown: true
-		},
-	
-		// управление колесом мыши
-		mousewheel: {
-			// чувствительность колеса мыши
-			sensitivity: 3,
-			// класс объекта на котором
-			// будет срабатывать прокрутка мышью
-			eventsTarget: ".wrapper"
-		},
-	
-		// отключение функционала
-		// если слайдов меньше чем нужно
-		watchOverflow: true,
-	
-		// скорость
-		speed: 1000,
-	
-		// обновить свайпер
-		// при изменении элементов слайдера
-		observer: true,
-	
-		// обновить свайпер
-		// при изменении родительских элементов 
-		observeParents: true,
-	
-		// обновить свайпер
-		// при изменении дочерних элементов 
-		observeSlideChildren: true,
-	});
-	$('.link__header').click(function () {
-		pageSlider.slideTo(0, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.link__about').click(function () {
-		pageSlider.slideTo(1, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.header__btn').click(function () {
-		pageSlider.slideTo(1, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.link__services').click(function () {
-		pageSlider.slideTo(2, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.link__portfolio').click(function () {
-		pageSlider.slideTo(3, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.link__blog').click(function () {
-		pageSlider.slideTo(4, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.link__contact').click(function () {
-		pageSlider.slideTo(5, 1000, true);
-		$('.menu__btn').removeClass('menu__btn-active')
-		$('.menu__nav').removeClass('menu__nav-active')
-		return false;
-	})
-	$('.arrow__down').click(function () {
-		pageSlider.slideTo(6, 1000, true);
-		return false;
-	})
-  }
+function catalogSliderInit() {
+	if (!catalogSlider) {
+		const pageSlider = new Swiper('.page', {
+			wrapperClass: "page__wrapper",
+			slideClass: "page__screen",
+			direction: 'vertical',
+
+			slidesPerView: 'auto',
+
+			parallax: true,
+
+			initialSlide: 0,
+
+			// включение/отключение
+			// перетаскивание на пк
+			simulateTouch: false,
+
+			// управление клавиатурой
+			keyboard: {
+				// включить/выключить
+				enabled: true,
+				// включить/выключить
+				// только когда слайдер
+				// в пределах вьюпорта
+				onlyInViewport: true,
+				// включить/выключить
+				// управление клавишами
+				// pageUp, pageDown
+				pageUpDown: true
+			},
+
+			// управление колесом мыши
+			mousewheel: {
+				// чувствительность колеса мыши
+				sensitivity: 3,
+				// класс объекта на котором
+				// будет срабатывать прокрутка мышью
+				eventsTarget: ".wrapper"
+			},
+
+			// отключение функционала
+			// если слайдов меньше чем нужно
+			watchOverflow: true,
+
+			// скорость
+			speed: 1000,
+
+			// обновить свайпер
+			// при изменении элементов слайдера
+			observer: true,
+
+			// обновить свайпер
+			// при изменении родительских элементов 
+			observeParents: true,
+
+			// обновить свайпер
+			// при изменении дочерних элементов 
+			observeSlideChildren: true,
+		});
+		$('.link__header').click(function () {
+			pageSlider.slideTo(0, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.link__about').click(function () {
+			pageSlider.slideTo(1, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.header__btn').click(function () {
+			pageSlider.slideTo(1, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.link__services').click(function () {
+			pageSlider.slideTo(2, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.link__portfolio').click(function () {
+			pageSlider.slideTo(3, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.link__blog').click(function () {
+			pageSlider.slideTo(4, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.link__contact').click(function () {
+			pageSlider.slideTo(5, 1000, true);
+			$('.menu__btn').removeClass('menu__btn-active')
+			$('.menu__nav').removeClass('menu__nav-active')
+			return false;
+		})
+		$('.arrow__down').click(function () {
+			pageSlider.slideTo(6, 1000, true);
+			return false;
+		})
+	}
 }
 
-function catalogSliderDestroy () {
-  if (catalogSlider) {
-    catalogSlider.destroy();
-    catalogSlider = null;
-  }
+function catalogSliderDestroy() {
+	if (catalogSlider) {
+		catalogSlider.destroy();
+		catalogSlider = null;
+	}
 }
 
 $(window).on('load resize', function () {
-  // Берём текущую ширину экрана
-  var windowWidth = $(this).innerWidth();
-  
-  // Если ширина экрана меньше или равна mediaQuerySize(1280)
-  if (windowWidth >= mediaQuerySize) {
-    // Инициализировать слайдер если он ещё не был инициализирован
-    catalogSliderInit()
-  } else {
-    // Уничтожить слайдер если он был инициализирован
-    catalogSliderDestroy()
-  }
+	// Берём текущую ширину экрана
+	var windowWidth = $(this).innerWidth();
+
+	// Если ширина экрана меньше или равна mediaQuerySize(1280)
+	if (windowWidth >= mediaQuerySize) {
+		// Инициализировать слайдер если он ещё не был инициализирован
+		catalogSliderInit()
+	} else {
+		// Уничтожить слайдер если он был инициализирован
+		catalogSliderDestroy()
+	}
 });
 
 $('.menu__btn').on('click', function (e) {
 	e.preventDefault;
 	$('.menu__btn').toggleClass('menu__btn-active')
 	$('.menu__nav').toggleClass('menu__nav-active')
+});
+
+$('.menu__nav__link').on('click', function (e) {
+	e.preventDefault;
+	$('.menu__btn').removeClass('menu__btn-active')
+	$('.menu__nav').removeClass('menu__nav-active')
 });
 
 $('body').on('click', function (e) {
