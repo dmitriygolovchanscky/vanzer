@@ -132,7 +132,7 @@ $(window).on('load resize', function () {
   }
 });
 
-$('.menu__block').on('click', function (e) {
+$('.menu__btn').on('click', function (e) {
 	e.preventDefault;
 	$('.menu__btn').toggleClass('menu__btn-active')
 	$('.menu__nav').toggleClass('menu__nav-active')
